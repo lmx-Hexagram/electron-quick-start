@@ -33,11 +33,11 @@ app.whenReady().then(() => {
 
   setInterval(() => {
     let testWin = BrowserWindow.getAllWindows()[0];
-    let size = testWin.getSize(); //or let size = win.getSize()
+    let size = testWin.getSize(); //or let size = win.getContentSize()
     console.log(size)
     testWin.setSize(Math.floor(size[0]), Math.floor(size[1]));
   }, 1000);
-  
+
 });
 
 // Quit when all windows are closed, except on macOS. There, it's common
